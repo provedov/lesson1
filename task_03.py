@@ -1,7 +1,6 @@
 def max_odd(array = None):
     if array == None:
-        print(None);
-        return
+        return array
     array_odd = None
     size = len(array)
     maxnum = None
@@ -11,4 +10,4 @@ def max_odd(array = None):
                 maxnum = int(array[i])
             elif array[i]%2 != 0 and maxnum < array[i]:
                 maxnum = int(array[i])
-    print(maxnum)
+    return maxnum

@@ -1,7 +1,7 @@
 import string
 def is_palindrome(text):
     if text == None:
-        print('False')
+        return False
         return
     text = text.lower()
     text = clearNullText(text)
@@ -11,7 +11,7 @@ def is_palindrome(text):
         if text[i] != text[(-1)*i-1]:
             ans = False
             break
-    print(ans)
+    return ans
 def clearNullText(text):
     size = len(text)
     newText = ''

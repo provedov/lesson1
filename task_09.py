@@ -8,8 +8,6 @@ def connect_dicts(dict1, dict2):
         count_dict1 = count_dict1 + dict1[i]
     for i in dict2:
         count_dict2 = count_dict2 + dict2[i]
-    print(count_dict1)
-    print(count_dict2)
     del_dict = {}
     for i in dict1:
         if dict1[i] < 10:
@@ -29,9 +27,6 @@ def connect_dicts(dict1, dict2):
         if i in new_dict and count_dict1 <= count_dict2:
             new_dict[i] = dict2[i]        
         elif not i in new_dict:
-            print(i)
             new_dict[i] = dict2[i]
     sorted_dict = dict(sorted(new_dict.items(), key=lambda item: item[1]))
-    print(dict1)
-    print(dict2)
-    print(sorted_dict)
+    return sorted_dict

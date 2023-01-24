@@ -1,7 +1,7 @@
 def coincidence(array = None,al = None):
     if array == None or al == None:
-        print('[]')
-        return
+        array = []
+        return array
     size = len(array)
     a = '['
     for i in range(size):

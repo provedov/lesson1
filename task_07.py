@@ -14,7 +14,7 @@ def combine_anagrams(words_array):
                     words_array[y] = ''
         list_of_anagrams.append(module)        
         words_array[i] = ''
-    print(list_of_anagrams)
+    return list_of_anagrams
 def words_is_anagram(word_1,word_2):
     size = len(word_1)     
     for i in word_1:

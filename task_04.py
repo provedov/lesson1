@@ -1,10 +1,10 @@
 def sort_list(array):
-    if array == None:
-        print('[]');
-        return
+    if array == None or array == []:
+        array = []
+        return array
     array = sorted(array)
     rev = [];
     for i in reversed(array):
         rev.append(i);
     rev.append(rev[-1])
-    print(rev)
+    return rev
