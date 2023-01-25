@@ -1,6 +1,4 @@
 class Dessert:
-    name = ''
-    calories = 0
     def __init__(self,name,calories):
         self.name = name
         self.calories = calories

@@ -2,9 +2,13 @@ def sort_list(array):
     if array == None or array == []:
         array = []
         return array
-    array = sorted(array)
-    rev = [];
-    for i in reversed(array):
-        rev.append(i);
-    rev.append(rev[-1])
-    return rev
+    minNum = min(array)
+    maxNum = max(array)
+    size = len(array)
+    for i in range(size):
+        if array[i] == maxNum:
+            array[i] = minNum
+        elif array[i] == minNum:
+            array[i] = maxNum   
+    array.append(minNum)
+    return array

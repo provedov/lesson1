@@ -3,12 +3,9 @@ def coincidence(array = None,al = None):
         array = []
         return array
     size = len(array)
-    a = '['
+    a = []
     for i in range(size):
         if((isinstance(array[i],int) == True or isinstance(array[i],float) == True)):
             if (array[i] <= max(al) and array[i] >= min(al)):
-                a = a + str(array[i])
-                if(i!= size):
-                    a = a + ', '
-    
-    print(a[0:-2]+']')
+                a.append(array[i])                 
+    return a
