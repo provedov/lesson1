@@ -3,6 +3,8 @@ def is_palindrome(text):
     if text == None:
         return False
         return
+    if isinstance(text,int) == True:
+        text = str(text)
     text = text.lower()
     text = clearNullText(text)
     ans = True

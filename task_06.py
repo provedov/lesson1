@@ -1,9 +1,9 @@
 def rps_game_winner(Players):
     size = len(Players)
     if size > 2:
-        raise WrongNumberOfPlayersError()
+        raise Exception("WrongNumberOfPlayersError")
     if is_exists_strategy_player(Players[0][1]) == False or is_exists_strategy_player(Players[1][1]) == False:
-        return NoSuchStrategyError()
+        raise Exception("NoSuchStrategyError")
     if win_first_player(Players) == True:
         return Players[0][0]+ ' '+Players[0][1]
     else:
@@ -26,7 +26,3 @@ def win_first_player(Players):
         return True
     else:
         return False
-class WrongNumberOfPlayersError(Exception):
-    pass
-class NoSuchStrategyError(Exception):
-    pass

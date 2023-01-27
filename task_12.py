@@ -1,5 +1,5 @@
 class Dessert:
-    def __init__(self,name,calories):
+    def __init__(self,name = '',calories = 0):
         self.name = name
         self.calories = calories
     def get_name(self):
@@ -18,7 +18,7 @@ class Dessert:
     def is_delicious(self):
         return True
 class JellyBean(Dessert):
-    def __init__(self,name,calories,flavor):
+    def __init__(self,flavor = '',name = '',calories = 0):
         Dessert.__init__(self,name,calories)
         self.flavor = flavor
     def get_flavor(self):  
